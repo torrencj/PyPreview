@@ -10,8 +10,8 @@ app = Flask(__name__)
 def index():
     return "Hello, World!"
 
-@app.route('/api/<siteURL>', methods=['GET'])
-return "Hello " + siteURL
+# @app.route('/api/<siteURL>', methods=['GET'])
+# return "Hello " + siteURL
 # def get_pic(siteURL):
 #   display = Display(visible=0, size=(1024,800))
 #   display.start()
