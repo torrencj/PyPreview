@@ -1,5 +1,4 @@
 Flask
 gunicorn
-python-2.7.14
 pyvirtualdisplay
 selenium
