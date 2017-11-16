@@ -17,7 +17,7 @@ def get_pic(siteURL):
     display = Display(visible=0, size=(1024,800))
     display.start()
     print("Loading site....")
-    browser = webdriver.Chrome("/app/.apt/usr/bin/google-chrome-stable") #Chromedriver is installed in a non default dir https://github.com/heroku/heroku-buildpack-xvfb-google-chrome
+    browser = webdriver.Chrome(executable_path='/app/.apt/usr/bin/google-chrome-stable') #Chromedriver is installed in a non default dir https://github.com/heroku/heroku-buildpack-xvfb-google-chrome
     browser.start()
     browser.get('https://' + siteURL)
     browser.get_screenshot_as_base64('screenie.txt')
