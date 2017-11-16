@@ -16,7 +16,7 @@ def get_pic(siteURL):
   display = Display(visible=0, size=(1024,800))
   display.start()
   print("Starting display...")
-  browser = webdriver.Firefox()
+  browser = webdriver.Chrome()
   print("Loading site....")
   browser.get('https://' + siteURL)
   browser.get_screenshot_as_base64('screenie.txt')
