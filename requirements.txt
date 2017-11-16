@@ -2,4 +2,3 @@ Flask
 gunicorn
 pyvirtualdisplay
 selenium
-xvfb
