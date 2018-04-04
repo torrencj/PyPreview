@@ -18,10 +18,25 @@ def get_pic(siteURL):
     display.start()
     print("Loading site....")
     browser = webdriver.Chrome(executable_path='/app/.apt/usr/bin/google-chrome-stable') #Chromedriver is installed in a non default dir https://github.com/heroku/heroku-buildpack-xvfb-google-chrome
-    browser.start()
     browser.get('https://' + siteURL)
     browser.get_screenshot_as_base64('screenie.txt')
     return "Saved"
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+from pyvirtualdisplay import Display
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+display = Display(visible=0, size=(1024, 768))
+display.start()
+chrome_options = Options()
+chrome_options.binary_location = '/app/.apt/opt/google/chrome/chrome'
+driver = webdriver.Chrome('/app/.chromedriver/bin/chromedriver', chrome_options=chrome_options)
+
+browser.get('http://www.ubuntu.com/')
+print(browser.page_source)
+
+browser.close()
+display.stop()
