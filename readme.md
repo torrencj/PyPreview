@@ -1,5 +1,11 @@
 # PyPreview
 
-This is a huge WIP and my first attempt at creating an api with Python on heroku.
+Just a fun little container to get a screenshot of any website. Uses Selenium and Chrome.
+
 ---
-The goal is a simple way to create an api that will take a URL (ie, "google.com") and spit out a screenshot in base64. Might be useful for something later.
+
+Update plans are:
+ - Accept custom resolutions
+ - Accept custom browser
+ - Upload files to Gcloud/AWS and return the storage link
+ - Whatever changes need to happen for use with kubernetes
